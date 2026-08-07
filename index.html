@@ -492,6 +492,108 @@
             }
         }
 
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 4rem;
+            background: #f7f7f7;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .why-heading {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        .why-sub {
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            transform: rotate(-2deg);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1550px;
+        }
+
+        .why-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        .why-number {
+            font-size: 4rem;
+            color: #aaaaaa;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .why-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            letter-spacing: 0.05em;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 992px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .why-heading {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-us {
+                padding: 4rem 2rem;
+                min-height: auto;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-heading {
+                font-size: 3rem;
+            }
+            .why-sub {
+                font-size: 2rem;
+            }
+            .why-card {
+                padding: 2rem;
+            }
+        }
+
         /* Footer Styles */
         .footer {
             position: relative;
@@ -756,7 +858,7 @@
 
         <div class="right-card">
             <h4 class="font-display">THIS MONTH'S<br>EXCLUSIVE</h4>
-            <p>Choose a package now to recieve upto a 30% discount on your website design</p>
+            <p>Choose a recommended package now to recieve upto a 30% discount on your website design</p>
             <button class="arrow-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -773,30 +875,58 @@
         <div class="feature-grid">
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display"> - Web Development -</h3>
+                <h3 class="font-display"> Web Development </h3>
                 <p>Custom-built, responsive websites engineered for speed, performance, and seamless user experiences.
                 </p>
             </div>
 
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display">- Software Solutions -</h3>
+                <h3 class="font-display"> Software Solutions </h3>
                 <p>Scalable and robust applications designed to solve complex challenges and streamline your operations.
                 </p>
             </div>
 
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display">- Hosting & Security -</h3>
+                <h3 class="font-display"> Hosting & Security </h3>
                 <p>Reliable server architecture and robust SSL encryption protocols to keep your digital assets online
                     and fully protected.</p>
             </div>
 
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display">- UI/UX Design -</h3>
+                <h3 class="font-display"> UI/UX Design </h3>
                 <p>Intuitive interfaces and visually striking digital experiences crafted to captivate and convert your
                     audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us" id="why-choose-us">
+        <h2 class="why-heading font-display">Why Choose Us</h2>
+        <span class="why-sub font-handwriting">Partner with excellence.</span>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-number">01</div>
+                <h3 class="font-display">Expert Team</h3>
+                <p>Our team comprises seasoned professionals with years of experience in their respective fields, dedicated to bringing your vision to life.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">02</div>
+                <h3 class="font-display">Tailored Solutions</h3>
+                <p>We don't believe in one-size-fits-all. Every project is uniquely crafted to align with your specific goals and brand identity.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">03</div>
+                <h3 class="font-display">Proven Results</h3>
+                <p>Our track record speaks for itself. We consistently deliver high-quality digital products that drive growth and engagement.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">04</div>
+                <h3 class="font-display">24/7 Support</h3>
+                <p>Your success is our priority. We provide round-the-clock support to ensure your digital assets run smoothly at all times.</p>
             </div>
         </div>
     </section>
@@ -813,7 +943,7 @@
                     <div class="footer-info">
                         <p>Upgrade the way you work, play, and relax with seating<br>designed for lasting comfort,
                             premium craftsmanship, and<br>everyday performance.</p>
-                        <button class="footer-btn">Discover Comfort <svg width="16" height="16" viewBox="0 0 24 24"
+                        <button class="footer-btn">Book a meeting with us <svg width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
                                 <path d="M7 17l9.2-9.2M17 17V7H7" />
@@ -894,7 +1024,7 @@
             </div>
 
             <div class="footer-copyright">
-                Nexytic © 2025. All rights reserved.
+                Nexytic © 2026. All rights reserved.
             </div>
         </div>
     </footer>
