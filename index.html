@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --bg-color: #ffffff;
@@ -131,7 +134,7 @@
             opacity: 0;
             animation: slideUpFade 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
             pointer-events: none;
-            
+
             /* Outline style for white bg */
             color: transparent;
             -webkit-text-stroke: 2px #e0e0e0;
@@ -183,7 +186,7 @@
         .product-image {
             width: 100%;
             height: auto;
-            filter: drop-shadow(0 40px 50px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.1));
             transition: transform 0.1s ease-out;
         }
 
@@ -292,82 +295,152 @@
         .feature-block {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
+            gap: 0;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0;
+            padding: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
         }
 
         .texture-img {
             width: 100%;
-            height: 180px;
-            background-color: var(--bg-card);
-            border-radius: 1rem;
-            background-image: url('https://images.unsplash.com/photo-1606925527187-5cc0777e5e11?q=80&w=600&auto=format&fit=crop');
+            height: 240px;
+            background-color: var(--bg-color);
+            border-radius: 0;
+            background-image: url('image/webdev.jpg');
             background-size: cover;
             background-position: center;
-            filter: grayscale(100%) contrast(110%) brightness(1.1);
         }
 
         .feature-block:nth-child(2) .texture-img {
-            background-image: url('https://images.unsplash.com/photo-1584347743900-349f7b6059d0?q=80&w=600&auto=format&fit=crop');
+            background-image: url('image/softwaredev.jpg');
         }
-        
+
         .feature-block:nth-child(3) .texture-img {
-            background-image: url('https://images.unsplash.com/photo-1605333552084-297eb09ceaf2?q=80&w=600&auto=format&fit=crop');
+            background-image: url('image/hostingandsecurity.jpg');
         }
-        
+
         .feature-block:nth-child(4) .texture-img {
-            background-image: url('https://images.unsplash.com/photo-1596482161245-c477f113df7c?q=80&w=600&auto=format&fit=crop');
+            background-image: url('image/uiux.jpg');
         }
 
         .feature-block h3 {
             font-size: 1.5rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            margin: 0;
         }
 
         .feature-block p {
             font-size: 0.9rem;
             line-height: 1.6;
             color: var(--text-secondary);
+            padding: 0 1.5rem 1.5rem;
+            margin: 0;
         }
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUpFade {
-            from { opacity: 0; transform: translate(-50%, -40%); }
-            to { opacity: 1; transform: translate(-50%, -50%); }
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
         }
 
         @keyframes revealHandwriting {
-            from { opacity: 0; clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
-            to { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+            from {
+                opacity: 0;
+                clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            }
+
+            to {
+                opacity: 1;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
         }
 
         @keyframes productEnter {
-            from { opacity: 0; transform: translateY(60px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         /* Responsive */
         @media (max-width: 1200px) {
-            .hero-bg-text { font-size: 30vw; }
-            .feature-grid { gap: 1.5rem; }
+            .hero-bg-text {
+                font-size: 30vw;
+            }
+
+            .feature-grid {
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 992px) {
-            nav { padding: 2rem; }
-            .nav-links { display: none; }
-            
-            .hero { padding: 8rem 2rem 2rem; }
-            .hero-bg-text { font-size: 35vw; }
-            .product-container { width: 75%; }
-            
-            .left-info { bottom: 10%; left: 2rem; }
-            .right-card { bottom: 10%; right: 2rem; }
-            
-            .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-            .features-heading { font-size: 4rem; }
+            nav {
+                padding: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 8rem 2rem 2rem;
+            }
+
+            .hero-bg-text {
+                font-size: 35vw;
+            }
+
+            .product-container {
+                width: 75%;
+            }
+
+            .left-info {
+                bottom: 10%;
+                left: 2rem;
+            }
+
+            .right-card {
+                bottom: 10%;
+                right: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .features-heading {
+                font-size: 4rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -376,10 +449,17 @@
                 justify-content: center;
                 padding-top: 10rem;
             }
-            .main-handwriting { font-size: 14vw; }
-            .sub-handwriting { font-size: 6vw; }
-            
-            .left-info, .right-card {
+
+            .main-handwriting {
+                font-size: 14vw;
+            }
+
+            .sub-handwriting {
+                font-size: 6vw;
+            }
+
+            .left-info,
+            .right-card {
                 position: relative;
                 bottom: auto;
                 left: auto;
@@ -389,15 +469,20 @@
                 margin-top: 2rem;
                 text-align: center;
             }
-            
+
             .right-card {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            
-            .feature-grid { grid-template-columns: 1fr; }
-            .features-heading { font-size: 3rem; }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-heading {
+                font-size: 3rem;
+            }
         }
 
         /* Footer Styles */
@@ -416,9 +501,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
             z-index: 1;
             pointer-events: none;
@@ -434,7 +519,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .country-label {
@@ -469,7 +554,7 @@
 
         .footer-info {
             padding: 3rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             max-width: 600px;
         }
 
@@ -525,7 +610,7 @@
         }
 
         .footer-links {
-            border-left: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
             padding: 3rem 0 3rem 4rem;
             display: flex;
             flex-direction: column;
@@ -554,8 +639,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1.5rem 0;
             flex-wrap: wrap;
             gap: 1rem;
@@ -593,35 +678,42 @@
             .footer-content {
                 padding: 0 2rem;
             }
+
             .footer-middle {
                 grid-template-columns: 1fr;
             }
+
             .footer-links {
                 border-left: none;
-                border-top: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
                 padding-left: 0;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
             }
+
             .footer-links ul {
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: 2rem;
             }
+
             .footer-logo {
                 font-size: 25vw;
             }
         }
+
         @media (max-width: 768px) {
             .footer-bottom {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1.5rem;
             }
+
             .contact-info {
                 flex-direction: column;
                 gap: 0.5rem;
             }
+
             .nav-horizontal {
                 flex-direction: column;
                 gap: 1rem;
@@ -629,15 +721,15 @@
         }
     </style>
 </head>
+
 <body>
 
     <nav>
         <div class="logo font-display">Nexytic</div>
         <ul class="nav-links">
-            <li><a href="#">Collection</a></li>
-            <li><a href="#">Concept</a></li>
-            <li><a href="#">Editorials</a></li>
-            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Portfolio</a></li>
         </ul>
         <button class="preorder-btn">Contact Us</button>
     </nav>
@@ -646,7 +738,7 @@
         <div class="hero-bg-text font-display">
             Nexytic
         </div>
-        
+
         <div class="handwritten-overlay">
             <span class="sub-handwriting font-handwriting">Your digital presence, perfected.</span>
         </div>
@@ -664,8 +756,9 @@
             <h4 class="font-display">THIS MONTH'S<br>EXCLUSIVE</h4>
             <p>Pre-order now and unlock exclusive pricing this month.</p>
             <button class="arrow-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
             </button>
         </div>
@@ -678,28 +771,31 @@
         <div class="feature-grid">
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display"></h3>
-                <p>Each piece is crafted as a statement — no mass production, only limited drops.</p>
+                <h3 class="font-display">01 — Web Development</h3>
+                <p>Custom-built, responsive websites engineered for speed, performance, and seamless user experiences.
+                </p>
             </div>
-            
+
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display">02 — ADVANCED MATERIALS</h3>
-                <p>Exceptional waterproof and wind-resistant fabrics for any condition.</p>
+                <h3 class="font-display">02 — Software Solutions</h3>
+                <p>Scalable and robust applications designed to solve complex challenges and streamline your operations.
+                </p>
             </div>
-            
+
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display">03 — LIGHTWEAR COMFORT</h3>
-                <p>Engineered for freedom of movement and effortless wear.</p>
+                <h3 class="font-display">03 — Hosting & Security</h3>
+                <p>Reliable server architecture and robust SSL encryption protocols to keep your digital assets online
+                    and fully protected.</p>
             </div>
-            
+
             <div class="feature-block">
                 <div class="texture-img"></div>
-                <h3 class="font-display">04 — FUTURE CRAFTSMANSHIP</h3>
-                <p>Precision design meets innovation — built to last, made to inspire.</p>
+                <h3 class="font-display">04 — UI/UX Design</h3>
+                <p>Intuitive interfaces and visually striking digital experiences crafted to captivate and convert your
+                    audience.</p>
             </div>
-        </div>
     </section>
 
     <footer class="footer">
@@ -709,25 +805,50 @@
                 <span class="country-label">USA</span>
                 <h1 class="footer-logo font-display">NEXYTIC</h1>
             </div>
-            
+
             <div class="footer-middle">
                 <div class="footer-main-info">
                     <div class="footer-info">
-                        <p>Upgrade the way you work, play, and relax with seating<br>designed for lasting comfort, premium craftsmanship, and<br>everyday performance.</p>
-                        <button class="footer-btn">Discover Comfort <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+                        <p>Upgrade the way you work, play, and relax with seating<br>designed for lasting comfort,
+                            premium craftsmanship, and<br>everyday performance.</p>
+                        <button class="footer-btn">Discover Comfort <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M7 17l9.2-9.2M17 17V7H7" />
+                            </svg></button>
                     </div>
-                    
+
                     <div class="footer-nav">
                         <ul class="nav-horizontal">
-                            <li><a href="#">Gaming Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
-                            <li><a href="#">Office Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
-                            <li><a href="#">Outdoor Furniture <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
-                            <li><a href="#">Auditorium Seating <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
-                            <li><a href="#">Recliners <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
+                            <li><a href="#">Gaming Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Office Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Outdoor Furniture <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Auditorium Seating <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Recliners <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <ul>
                         <li><a href="#">Terms</a></li>
@@ -737,20 +858,39 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="social-links">
-                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
-                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z" />
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="4" x2="20" y2="20" />
+                            <line x1="20" y1="4" x2="4" y2="20" />
+                        </svg></a>
                 </div>
                 <div class="contact-info">
                     <span>Support@nexytic.com</span>
                     <span>Contact : +91 7520444000</span>
                 </div>
             </div>
-            
+
             <div class="footer-copyright">
                 Nexytic USA © 2025. All rights reserved.
             </div>
@@ -762,15 +902,15 @@
         const hero = document.getElementById('hero');
         const product = document.querySelector('.product-image');
         const bgText = document.querySelector('.hero-bg-text');
-        
+
         // Only run mouse parallax on desktop
         if (window.innerWidth > 992) {
             hero.addEventListener('mousemove', (e) => {
                 const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
                 const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
-                
+
                 product.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
-                
+
                 // Subtle parallax for background text in opposite direction
                 const bgX = (window.innerWidth / 2 - e.pageX) / 90;
                 const bgY = (window.innerHeight / 2 - e.pageY) / 90;
@@ -794,4 +934,5 @@
         });
     </script>
 </body>
+
 </html>
