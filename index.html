@@ -398,7 +398,234 @@
             
             .feature-grid { grid-template-columns: 1fr; }
             .features-heading { font-size: 3rem; }
-            .features-sub { font-size: 2rem; margin-bottom: 3rem; }
+        }
+
+        /* Footer Styles */
+        .footer {
+            position: relative;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 3rem 0 1.5rem;
+            overflow: hidden;
+            margin-top: 5rem;
+        }
+
+        .footer-grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 4rem;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .country-label {
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            color: #aaaaaa;
+            margin-bottom: -1rem;
+            z-index: 2;
+        }
+
+        .footer-logo {
+            font-size: 22vw;
+            line-height: 0.8;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0.02em;
+            margin: 0;
+            padding-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .footer-middle {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+        }
+
+        .footer-main-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-info {
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            max-width: 600px;
+        }
+
+        .footer-info p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #aaaaaa;
+            margin-bottom: 2rem;
+        }
+
+        .footer-btn {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .footer-nav {
+            padding: 2.5rem 0;
+        }
+
+        .nav-horizontal {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .nav-horizontal a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-horizontal a:hover {
+            color: #ffffff;
+        }
+
+        .footer-links {
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem 0 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #aaaaaa;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 3rem;
+            color: #aaaaaa;
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            color: #666666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 992px) {
+            .footer-content {
+                padding: 0 2rem;
+            }
+            .footer-middle {
+                grid-template-columns: 1fr;
+            }
+            .footer-links {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                padding-left: 0;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .footer-links ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+            .footer-logo {
+                font-size: 25vw;
+            }
+        }
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .nav-horizontal {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -474,6 +701,61 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-grid-bg"></div>
+        <div class="footer-content">
+            <div class="footer-top">
+                <span class="country-label">USA</span>
+                <h1 class="footer-logo font-display">NEXYTIC</h1>
+            </div>
+            
+            <div class="footer-middle">
+                <div class="footer-main-info">
+                    <div class="footer-info">
+                        <p>Upgrade the way you work, play, and relax with seating<br>designed for lasting comfort, premium craftsmanship, and<br>everyday performance.</p>
+                        <button class="footer-btn">Discover Comfort <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <ul class="nav-horizontal">
+                            <li><a href="#">Gaming Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
+                            <li><a href="#">Office Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
+                            <li><a href="#">Outdoor Furniture <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
+                            <li><a href="#">Auditorium Seating <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
+                            <li><a href="#">Recliners <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+                </div>
+                <div class="contact-info">
+                    <span>Support@nexytic.com</span>
+                    <span>Contact : +91 7520444000</span>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                Nexytic USA © 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Parallax effect for the product image on mousemove
