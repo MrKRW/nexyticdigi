@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages | Nexytic</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #0a0a0a;
+            --text-secondary: #444444;
+            --text-light: #888888;
+            --border-color: rgba(0, 0, 0, 0.12);
+            --bg-card: #fafafa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography Classes */
+        .font-display {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .font-handwriting {
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Navigation */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.4;
+        }
+
+        .preorder-btn {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 2rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .preorder-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        /* Hero Header Section */
+        .hero-header {
+            min-height: 50vh;
+            padding: 12rem 4rem 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background-image:
+                linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-title {
+            font-size: 7vw;
+            line-height: 0.9;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 3vw;
+            color: var(--text-secondary);
+            transform: rotate(-1.5deg);
+        }
+
+        /* Packages Grid Section */
+        .packages-section {
+            padding: 8rem 4rem;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: center;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .package-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            padding: 3.5rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Make popular card stand out slightly */
+        .package-card.popular {
+            border-color: var(--text-primary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 1.25rem;
+            right: 2rem;
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            transform: rotate(6deg);
+            user-select: none;
+        }
+
+        .package-num {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .package-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .package-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 2.5rem;
+            min-height: 2.7rem;
+        }
+
+        .package-price-box {
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+        }
+
+        .package-price {
+            font-size: 3.5rem;
+            font-weight: 500;
+            line-height: 1;
+            color: var(--text-primary);
+        }
+
+        .package-price-period {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .package-divider {
+            height: 1px;
+            background-color: var(--border-color);
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 3.5rem;
+            flex-grow: 1;
+        }
+
+        .package-features li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .package-features svg {
+            flex-shrink: 0;
+            color: var(--text-primary);
+            opacity: 0.8;
+        }
+
+        .package-btn {
+            width: 100%;
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 1.1rem;
+            border-radius: 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .package-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-color);
+            border-color: var(--text-primary);
+        }
+
+        .package-card.popular .package-btn {
+            background: var(--text-primary);
+            color: var(--bg-color);
+            border-color: var(--text-primary);
+        }
+
+        .package-card.popular .package-btn:hover {
+            background: transparent;
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 8rem 4rem;
+            background: var(--bg-color);
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-heading {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        .faq-sub {
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 6rem;
+            transform: rotate(-1.5deg);
+            display: inline-block;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem 3rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer Styles */
+        .footer {
+            position: relative;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 3rem 0 1.5rem;
+            overflow: hidden;
+            margin-top: 5rem;
+        }
+
+        .footer-grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 4rem;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+            font-size: 22vw;
+            line-height: 0.8;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0.02em;
+            margin: 0;
+            padding-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .footer-middle {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+        }
+
+        .footer-main-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-info {
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+        }
+
+        .footer-info p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #aaaaaa;
+            margin-bottom: 2rem;
+        }
+
+        .footer-btn {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .footer-nav {
+            padding: 2.5rem 0;
+        }
+
+        .nav-horizontal {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .nav-horizontal a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-horizontal a:hover {
+            color: #ffffff;
+        }
+
+        .footer-links {
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #aaaaaa;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 3rem;
+            color: #aaaaaa;
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            color: #666666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 8vw;
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav {
+                padding: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-header {
+                padding: 10rem 2rem 4rem;
+            }
+
+            .hero-title {
+                font-size: 10vw;
+            }
+
+            .hero-subtitle {
+                font-size: 4.5vw;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .packages-section {
+                padding: 6rem 2rem;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .faq-section {
+                padding: 6rem 2rem;
+            }
+
+            .faq-heading {
+                font-size: 4rem;
+            }
+
+            .footer-content {
+                padding: 0 2rem;
+            }
+
+            .footer-middle {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-left: 0;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .footer-links ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .footer-logo {
+                font-size: 25vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .faq-heading {
+                font-size: 3rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-horizontal {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo font-display">Nexytic</a>
+        <ul class="nav-links">
+            <li><a href="index.html#features">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+        <button class="preorder-btn" onclick="window.location.href='index.html#contact'">Contact Us</button>
+    </nav>
+
+    <header class="hero-header">
+        <h1 class="hero-title font-display">OUR SETUPS.</h1>
+        <span class="hero-subtitle font-handwriting">Transparent, value-driven pricing.</span>
+    </header>
+
+    <section class="packages-section" id="packages">
+        <div class="packages-grid">
+            <!-- Tier 1: Lite -->
+            <div class="package-card">
+                <div class="package-num font-display">01 — LITE</div>
+                <h3 class="package-title font-display">STARTUP</h3>
+                <p class="package-desc">Perfect for high-impact landing pages and digital product showcases.</p>
+                <div class="package-price-box">
+                    <span class="package-price">$1,200</span>
+                    <span class="package-price-period">/ project</span>
+                </div>
+                <div class="package-divider"></div>
+                <ul class="package-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Custom UI/UX Design
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Responsive Web Development
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        1 Month Technical Support
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        SSL Configuration & Setup
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Standard SEO Setup
+                    </li>
+                </ul>
+                <button class="package-btn">Get Started</button>
+            </div>
+
+            <!-- Tier 2: Core (Popular) -->
+            <div class="package-card popular">
+                <div class="popular-badge font-handwriting">recommended</div>
+                <div class="package-num font-display">02 — CORE</div>
+                <h3 class="package-title font-display">GROWTH</h3>
+                <p class="package-desc">Full-featured business websites, dynamic components, and custom CMS integration.</p>
+                <div class="package-price-box">
+                    <span class="package-price">$3,500</span>
+                    <span class="package-price-period">/ project</span>
+                </div>
+                <div class="package-divider"></div>
+                <ul class="package-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Bespoke Design System
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        High-Performance Custom CMS
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        3 Months Support & Maintenance
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Advanced Security Hardening
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Enterprise SEO Integration
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Speed Optimization & Auditing
+                    </li>
+                </ul>
+                <button class="package-btn">Choose Growth</button>
+            </div>
+
+            <!-- Tier 3: Elite / Apex -->
+            <div class="package-card">
+                <div class="package-num font-display">03 — APEX</div>
+                <h3 class="package-title font-display">CUSTOM</h3>
+                <p class="package-desc">Bespoke software architecture, multi-platform design, and tailored services.</p>
+                <div class="package-price-box">
+                    <span class="package-price">Custom</span>
+                    <span class="package-price-period">starts at $8k</span>
+                </div>
+                <div class="package-divider"></div>
+                <ul class="package-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Custom Software Architecture
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        API & Database Engineering
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Headless & Jamstack Deployments
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Dedicated Server Provisioning
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Lifetime Critical Support
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Unlimited Consulting & Revisions
+                    </li>
+                </ul>
+                <button class="package-btn">Enquire Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="faq-heading font-display">FAQ.</h2>
+        <span class="faq-sub font-handwriting">Common queries answered.</span>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4 class="faq-question">Can I customize my project package?</h4>
+                <p class="faq-answer">Absolutely. While our Lite and Core packages fit most standards, the Apex tier is explicitly designed for unique business configurations. We also customize aspects of Lite/Core to align with specific design goals.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-question">What are the typical project timelines?</h4>
+                <p class="faq-answer">Startup/Lite pages usually deploy within 2-3 weeks. Growth/Core projects average 4-6 weeks depending on CMS integration and complexity. Apex systems have custom schedules based on project specs.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-question">Do you assist with hosting setup and configuration?</h4>
+                <p class="faq-answer">Yes, we provide full support setting up domains, configuring DNS rules, installing SSL certificates, and provisioning server environments as standard service options on all service setups.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-question">Is ongoing support included post-launch?</h4>
+                <p class="faq-answer">Every setup package includes a support period (1 month for Lite, 3 months for Core, lifetime critical for Apex). Additional retainer options are also available for continuous upgrades.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid-bg"></div>
+        <div class="footer-content">
+            <div class="footer-top">
+                <h1 class="footer-logo font-display">NEXYTIC</h1>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-main-info">
+                    <div class="footer-info">
+                        <p>Upgrade the way you work, play, and relax with seating<br>designed for lasting comfort,
+                            premium craftsmanship, and<br>everyday performance.</p>
+                        <button class="footer-btn">Discover Comfort <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M7 17l9.2-9.2M17 17V7H7" />
+                            </svg></button>
+                    </div>
+
+                    <div class="footer-nav">
+                        <ul class="nav-horizontal">
+                            <li><a href="#">Gaming Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Office Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Outdoor Furniture <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Auditorium Seating <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Recliners <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z" />
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="4" x2="20" y2="20" />
+                            <line x1="20" y1="4" x2="4" y2="20" />
+                        </svg></a>
+                </div>
+                <div class="contact-info">
+                    <span>Support@nexytic.com</span>
+                    <span>Contact : +91 7520444000</span>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                Nexytic © 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
