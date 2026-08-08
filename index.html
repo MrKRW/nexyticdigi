@@ -291,6 +291,49 @@
             transform: rotate(-2deg);
         }
 
+        /* Marquee styles */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            display: flex;
+            white-space: nowrap;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            animation: marqueeScroll 25s linear infinite;
+            width: max-content;
+        }
+        
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .marquee-dot {
+            color: #1a237e;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 3rem;
+            line-height: 0;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -1037,6 +1080,24 @@
             </button>
         </div>
     </section>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span class="marquee-item">Portfolio Websites</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">Trusted by leading businesses</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">100+ Projects Delivered</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">ISO Aligned</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">Business Websites</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">Landing Pages</span><span class="marquee-dot">&times;</span>
+            <!-- Duplicate for seamless scroll -->
+            <span class="marquee-item">Portfolio Websites</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">Trusted by leading businesses</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">100+ Projects Delivered</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">ISO Aligned</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">Business Websites</span><span class="marquee-dot">&times;</span>
+            <span class="marquee-item">Landing Pages</span><span class="marquee-dot">&times;</span>
+        </div>
+    </div>
 
     <section class="features" id="features">
         <h2 class="features-heading font-display">Our Services</h2>
