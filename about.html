@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexytic | About Us</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #0a0a0a;
+            --text-secondary: #444444;
+            --text-light: #888888;
+            --border-color: rgba(0, 0, 0, 0.12);
+            --bg-card: #fbffeb;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography Classes */
+        .font-display {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .font-handwriting {
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Navigation */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.5s forwards;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.4;
+        }
+
+        .preorder-btn {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 2rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .preorder-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* About Hero */
+        .about-hero {
+            padding: 12rem 4rem 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--bg-color);
+        }
+        .about-heading {
+            font-size: 5rem;
+            color: var(--text-primary);
+            margin-bottom: 0;
+        }
+        .about-sub {
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            transform: rotate(-2deg);
+        }
+
+        /* About Content Section */
+        .about-section {
+            padding: 4rem;
+            background: var(--bg-color);
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .about-image {
+            width: 100%;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Core Values Section */
+        .values-section {
+            padding: 6rem 4rem;
+            background: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .values-heading {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .value-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-card);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .value-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .value-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .value-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            nav {
+                padding: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-text h3 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero {
+                padding-top: 10rem;
+            }
+            .about-heading {
+                font-size: 4rem;
+            }
+            .about-section {
+                padding: 2rem;
+            }
+            .values-section {
+                padding: 4rem 2rem;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .values-heading {
+                font-size: 3rem;
+            }
+        }
+
+        /* Footer Styles from Contact */
+        .footer {
+            position: relative;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 3rem 0 1.5rem;
+            overflow: hidden;
+            margin-top: 5rem;
+        }
+
+        .footer-grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 4rem;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+            font-size: 22vw;
+            line-height: 0.8;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0.02em;
+            margin: 0;
+            padding-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .footer-middle {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+        }
+
+        .footer-main-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-info {
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+        }
+
+        .footer-info p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #aaaaaa;
+            margin-bottom: 2rem;
+        }
+
+        .footer-btn {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .footer-nav {
+            padding: 2.5rem 0;
+        }
+
+        .nav-horizontal {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .nav-horizontal a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-horizontal a:hover {
+            color: #ffffff;
+        }
+
+        .footer-links {
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #aaaaaa;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 3rem;
+            color: #aaaaaa;
+            font-size: 0.9rem;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            color: #666666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 992px) {
+            .footer-content { padding: 0 2rem; }
+            .footer-middle { grid-template-columns: 1fr; }
+            .footer-links {
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-left: 0;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .footer-links ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+            .footer-logo { font-size: 25vw; }
+        }
+
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .nav-horizontal {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/jpeg" href="nexyticlogonlyo.jpeg">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo font-display">
+            <img src="logonew_clean.png" alt="Nexytic Logo" style="height: 45px; width: auto; border-radius: 4px; mix-blend-mode: multiply;">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="#">Our work</a></li>
+        </ul>
+        <button class="preorder-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+    </nav>
+
+    <section class="about-hero">
+        <h1 class="about-heading font-display">Our Story</h1>
+        <span class="about-sub font-handwriting">Designing the future of digital.</span>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="image/uiux.jpg" alt="About Nexytic Team">
+            </div>
+            <div class="about-text">
+                <h3 class="font-display">Who We Are</h3>
+                <p>At Nexytic, we believe that great digital experiences are built on a foundation of creativity, innovation, and strategic thinking. We are a passionate team of designers, developers, and digital strategists committed to pushing the boundaries of what's possible online.</p>
+                <p>Since our inception, we have partnered with forward-thinking brands to transform their digital presence. Whether it's crafting a stunning user interface, building robust software, or architecting scalable web applications, we bring expertise and dedication to every project.</p>
+                <button class="preorder-btn" style="margin-top: 1.5rem;" onclick="window.location.href='contact.html'">Work With Us</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-section" style="padding-top: 0;">
+        <div class="about-container" style="direction: rtl;">
+            <div class="about-image">
+                <img src="image/webdev.jpg" alt="Our Approach">
+            </div>
+            <div class="about-text" style="direction: ltr;">
+                <h3 class="font-display">Our Approach</h3>
+                <p>We don't just write code and push pixels; we solve complex business problems. Our methodology is rooted in deep collaboration and an agile mindset. We immerse ourselves in your vision to ensure every solution is tailored to your unique objectives.</p>
+                <p>By blending state-of-the-art technology with human-centric design, we create solutions that not only look spectacular but perform flawlessly. We measure our success by the growth and success of the clients we serve.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2 class="values-heading font-display">Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <h4>Excellence</h4>
+                <p>We pursue exceptional quality in every line of code we write and every pixel we place. Good is the enemy of great.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h4>Collaboration</h4>
+                <p>We believe the best results come from working together—with our team and as an extension of yours.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 12h4l3-9 5 18 3-9h5"></path>
+                    </svg>
+                </div>
+                <h4>Innovation</h4>
+                <p>The digital landscape is always evolving, and so are we. We embrace new technologies to keep you ahead.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid-bg"></div>
+        <div class="footer-content">
+            <div class="footer-top">
+                <h1 class="footer-logo font-display">NEXYTIC</h1>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-main-info">
+                    <div class="footer-info">
+                        <p>Upgrade the way you work, play, and relax with seating<br>designed for lasting comfort,
+                            premium craftsmanship, and<br>everyday performance.</p>
+                        <button class="footer-btn">Book a meeting with us <svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M7 17l9.2-9.2M17 17V7H7" />
+                            </svg></button>
+                    </div>
+
+                    <div class="footer-nav">
+                        <ul class="nav-horizontal">
+                            <li><a href="#">Gaming Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Office Chairs <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Outdoor Furniture <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Auditorium Seating <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="#">Recliners <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z" />
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                        </svg></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="4" x2="20" y2="20" />
+                            <line x1="20" y1="4" x2="4" y2="20" />
+                        </svg></a>
+                </div>
+                <div class="contact-info">
+                    <span>Support@nexytic.com</span>
+                    <span>Contact : +91 7520444000</span>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                Nexytic © 2026. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
