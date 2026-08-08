@@ -594,6 +594,171 @@
             }
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            padding: 8rem 4rem;
+            background: var(--bg-color);
+            position: relative;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .testimonials-container {
+            display: flex;
+            width: 100%;
+            max-width: 1550px;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .testi-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .testi-left h2 {
+            font-size: 5rem;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .testi-left p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 350px;
+            line-height: 1.6;
+        }
+
+        .testi-controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .testi-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testi-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        .testi-right {
+            flex: 1.2;
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 350px;
+        }
+
+        .testi-slider {
+            display: grid;
+            grid-template-areas: "slide";
+            width: 100%;
+            align-items: center;
+        }
+
+        .testi-item {
+            grid-area: slide;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
+        }
+
+        .testi-item.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .quote-icon {
+            font-size: 5rem;
+            color: #1a237e;
+            line-height: 0.5;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .testi-text {
+            font-size: 2rem;
+            line-height: 1.35;
+            color: var(--text-primary);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .testi-user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testi-avatar-placeholder {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--text-primary);
+            color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .testi-user-info h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .testi-user-info span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 992px) {
+            .testimonials-container {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .testi-left h2 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials {
+                padding: 4rem 2rem;
+            }
+            .testi-left h2 {
+                font-size: 3rem;
+            }
+            .testi-text {
+                font-size: 1.5rem;
+            }
+            .quote-icon {
+                font-size: 4rem;
+            }
+        }
+
         /* Footer Styles */
         .footer {
             position: relative;
@@ -821,6 +986,7 @@
             }
         }
     </style>
+    <link rel="icon" type="image/jpeg" href="nexyticlogonlyo.jpeg">
 </head>
 
 <body>
@@ -927,6 +1093,69 @@
                 <div class="why-number">04</div>
                 <h3 class="font-display">24/7 Support</h3>
                 <p>Your success is our priority. We provide round-the-clock support to ensure your digital assets run smoothly at all times.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <div class="testi-left">
+                <h2 class="font-display">From our<br>community.</h2>
+                <p>Here's what our clients had to say about Nexytic.</p>
+                <div class="testi-controls">
+                    <button class="testi-btn prev-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="testi-btn next-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="testi-right">
+                <div class="testi-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testi-item active">
+                        <span class="quote-icon">“</span>
+                        <p class="testi-text">Nexytic has helped me scale my online presence and become a better business owner than I ever thought possible.”</p>
+                        <div class="testi-user">
+                            <div class="testi-avatar-placeholder">KW</div>
+                            <div class="testi-user-info">
+                                <h4>Kyle Weznick</h4>
+                                <span>Media Director, Turn Around Group</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testi-item">
+                        <span class="quote-icon">“</span>
+                        <p class="testi-text">The level of detail and care their team provides is unmatched. Our digital transformation was seamless and highly effective.”</p>
+                        <div class="testi-user">
+                            <div class="testi-avatar-placeholder">SJ</div>
+                            <div class="testi-user-info">
+                                <h4>Sarah Jenkins</h4>
+                                <span>Operations Manager, TechFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testi-item">
+                        <span class="quote-icon">“</span>
+                        <p class="testi-text">Working with Nexytic was the best investment we've made. The results speak for themselves, with improved metrics across the board.”</p>
+                        <div class="testi-user">
+                            <div class="testi-avatar-placeholder">MR</div>
+                            <div class="testi-user-info">
+                                <h4>Michael Rivers</h4>
+                                <span>Founder, Elevate Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1064,6 +1293,58 @@
                 bgText.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.1}px))`;
             }
         });
+
+        // Testimonials Auto-switching
+        const testimonials = document.querySelectorAll('.testi-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentTesti = 0;
+        let testiInterval;
+
+        function showTestimonial(index) {
+            testimonials.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            currentTesti = (currentTesti + 1) % testimonials.length;
+            showTestimonial(currentTesti);
+        }
+
+        function prevTestimonial() {
+            currentTesti = (currentTesti - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTesti);
+        }
+
+        function startAutoSwitch() {
+            if(testimonials.length > 0) {
+                testiInterval = setInterval(nextTestimonial, 5000);
+            }
+        }
+
+        function resetAutoSwitch() {
+            clearInterval(testiInterval);
+            startAutoSwitch();
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextTestimonial();
+                resetAutoSwitch();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevTestimonial();
+                resetAutoSwitch();
+            });
+        }
+
+        startAutoSwitch();
     </script>
 </body>
 
