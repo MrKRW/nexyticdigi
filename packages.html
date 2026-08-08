@@ -624,6 +624,168 @@
                 gap: 1rem;
             }
         }
+        /* Estimator Section */
+        .estimator-section {
+            padding: 8rem 4rem;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .estimator-heading {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        .estimator-sub {
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            transform: rotate(-1.5deg);
+            display: inline-block;
+        }
+
+        .estimator-container {
+            display: flex;
+            gap: 4rem;
+            width: 100%;
+            max-width: 1200px;
+            align-items: flex-start;
+        }
+
+        .estimator-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .est-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .est-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .est-slider {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .est-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .est-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .est-radio {
+            cursor: pointer;
+        }
+
+        .est-radio input {
+            display: none;
+        }
+
+        .est-radio span {
+            display: block;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            background: var(--bg-color);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .est-radio input:checked + span {
+            border-color: var(--text-primary);
+            background: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        .estimator-result-card {
+            width: 350px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            padding: 3rem 2rem;
+            position: sticky;
+            top: 8rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+
+        .est-result-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .est-price-box {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .est-currency {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .est-total {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .est-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 992px) {
+            .estimator-container {
+                flex-direction: column;
+            }
+            .estimator-result-card {
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+            .estimator-heading {
+                font-size: 4rem;
+            }
+        }
     </style>
 </head>
 
@@ -765,6 +927,108 @@
         </div>
     </section>
 
+    <!-- Cost Estimator Section -->
+    <section class="estimator-section" id="estimator">
+        <h2 class="estimator-heading font-display">CUSTOM ESTIMATE.</h2>
+        <span class="estimator-sub font-handwriting">Build your perfect package.</span>
+        
+        <div class="estimator-container">
+            <div class="estimator-form">
+                <!-- Pages Slider -->
+                <div class="est-group">
+                    <label class="est-label">Number of Pages: <span id="pages-val">5</span></label>
+                    <input type="range" id="pages-slider" min="1" max="20" value="5" class="est-slider">
+                </div>
+                
+                <!-- UI/UX Design -->
+                <div class="est-group">
+                    <label class="est-label">UI/UX Design Complexity</label>
+                    <div class="est-options">
+                        <label class="est-radio">
+                            <input type="radio" name="design" value="0" checked>
+                            <span>Standard (Template)</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="design" value="800">
+                            <span>Custom Design</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="design" value="1500">
+                            <span>Premium/Award-winning</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- CMS Integration -->
+                <div class="est-group">
+                    <label class="est-label">CMS Integration</label>
+                    <div class="est-options">
+                        <label class="est-radio">
+                            <input type="radio" name="cms" value="0" checked>
+                            <span>None (Static)</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="cms" value="600">
+                            <span>Standard (WordPress)</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="cms" value="1200">
+                            <span>Headless/Custom CMS</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="est-group">
+                    <label class="est-label">E-commerce Functionality</label>
+                    <div class="est-options">
+                        <label class="est-radio">
+                            <input type="radio" name="ecommerce" value="0" checked>
+                            <span>No</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="ecommerce" value="1000">
+                            <span>Basic (up to 50 products)</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="ecommerce" value="2500">
+                            <span>Advanced</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- SEO -->
+                <div class="est-group">
+                    <label class="est-label">SEO & Marketing Setup</label>
+                    <div class="est-options">
+                        <label class="est-radio">
+                            <input type="radio" name="seo" value="0" checked>
+                            <span>None</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="seo" value="200">
+                            <span>Basic SEO</span>
+                        </label>
+                        <label class="est-radio">
+                            <input type="radio" name="seo" value="600">
+                            <span>Advanced SEO & Analytics</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="estimator-result-card">
+                <h3 class="est-result-title font-display">ESTIMATED TOTAL</h3>
+                <div class="est-price-box">
+                    <span class="est-currency">$</span>
+                    <span id="total-price" class="est-total">1000</span>
+                </div>
+                <p class="est-note">Base setup fee of $500 included. This is a rough estimate; contact us for a detailed quote.</p>
+                <button class="package-btn" onclick="window.location.href='index.html#contact'">Request Quote</button>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq-section">
         <h2 class="faq-heading font-display">FAQ.</h2>
@@ -888,6 +1152,54 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const basePrice = 500;
+            const pricePerPage = 100;
+
+            const pagesSlider = document.getElementById('pages-slider');
+            const pagesVal = document.getElementById('pages-val');
+            const totalPriceEl = document.getElementById('total-price');
+
+            const radioGroups = ['design', 'cms', 'ecommerce', 'seo'];
+
+            function calculateTotal() {
+                let total = basePrice;
+
+                // Add pages cost
+                const pagesCount = parseInt(pagesSlider.value);
+                total += pagesCount * pricePerPage;
+
+                // Add radio options cost
+                radioGroups.forEach(groupName => {
+                    const selected = document.querySelector(`input[name="${groupName}"]:checked`);
+                    if (selected) {
+                        total += parseInt(selected.value);
+                    }
+                });
+
+                // Update UI with formatting
+                totalPriceEl.textContent = total.toLocaleString();
+            }
+
+            // Listen for slider change
+            pagesSlider.addEventListener('input', (e) => {
+                pagesVal.textContent = e.target.value;
+                calculateTotal();
+            });
+
+            // Listen for radio changes
+            radioGroups.forEach(groupName => {
+                const radios = document.querySelectorAll(`input[name="${groupName}"]`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', calculateTotal);
+                });
+            });
+
+            // Initial calculation
+            calculateTotal();
+        });
+    </script>
 </body>
 
 </html>
