@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Packages | Nexytic</title>
+    <title>Services | Nexytic</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,6 +140,131 @@
             font-size: 3vw;
             color: var(--text-secondary);
             transform: rotate(-1.5deg);
+        }
+
+        /* Services Overview Section */
+        .services-overview {
+            padding: 8rem 4rem;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .services-title {
+            font-size: 5rem;
+            color: var(--text-primary);
+            margin-bottom: 0;
+        }
+
+        .services-subtitle {
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            transform: rotate(-1.5deg);
+            display: inline-block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            padding: 3rem 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            border-color: var(--text-primary);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            border-color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .service-name {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: auto;
+        }
+
+        .service-features li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .service-features li::before {
+            content: '→';
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-title {
+                font-size: 4rem;
+            }
+            .services-overview {
+                padding: 6rem 2rem;
+            }
         }
 
         /* Packages Grid Section */
@@ -799,16 +924,109 @@
         <ul class="nav-links">
             <li><a href="index.html#features">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="packages.html">Packages</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="#">Our work</a></li>
         </ul>
         <button class="preorder-btn" onclick="window.location.href='index.html#contact'">Contact Us</button>
     </nav>
 
     <header class="hero-header">
-        <h1 class="hero-title font-display">OUR Packages</h1>
-        <span class="hero-subtitle font-handwriting">Transparent, value-driven pricing.</span>
+        <h1 class="hero-title font-display">OUR Services</h1>
+        <span class="hero-subtitle font-handwriting">Comprehensive digital solutions.</span>
     </header>
+
+    <section class="services-overview">
+        <div class="services-header">
+            <h2 class="services-title font-display">What We Do.</h2>
+            <span class="services-subtitle font-handwriting">Everything you need to succeed online.</span>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h3 class="service-name font-display">Web Development</h3>
+                <p class="service-desc">We build fast, secure, and scalable websites tailored to your specific business needs. From stunning landing pages to complex corporate platforms.</p>
+                <ul class="service-features">
+                    <li>Custom Coding (HTML, CSS, JS)</li>
+                    <li>Responsive & Mobile-First</li>
+                    <li>CMS Integration</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3 class="service-name font-display">Software Solutions</h3>
+                <p class="service-desc">Custom web applications and enterprise software built to streamline your operations and deliver exceptional functionality.</p>
+                <ul class="service-features">
+                    <li>Custom Web Applications</li>
+                    <li>Admin Dashboards</li>
+                    <li>API Development</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                </div>
+                <h3 class="service-name font-display">UI/UX Design</h3>
+                <p class="service-desc">Intuitive, aesthetic, and user-centric design that captivates your audience and ensures a seamless digital experience across all devices.</p>
+                <ul class="service-features">
+                    <li>Wireframing & Prototyping</li>
+                    <li>User Interface Design</li>
+                    <li>Brand Integration</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <h3 class="service-name font-display">Hosting & Security</h3>
+                <p class="service-desc">Reliable hosting solutions paired with top-tier security protocols to keep your data safe and your website running smoothly 24/7.</p>
+                <ul class="service-features">
+                    <li>Cloud Infrastructure</li>
+                    <li>SSL Certificates</li>
+                    <li>Performance Optimization</li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h3 class="service-name font-display">SEO Optimization</h3>
+                <p class="service-desc">Enhance your visibility on search engines. We use proven strategies to rank your website higher and attract organic, high-quality traffic.</p>
+                <ul class="service-features">
+                    <li>On-Page & Off-Page SEO</li>
+                    <li>Keyword Research</li>
+                    <li>Analytics & Reporting</li>
+                </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </div>
+                <h3 class="service-name font-display">E-Commerce</h3>
+                <p class="service-desc">Robust online stores built for conversions. We deliver secure payment gateways, inventory management, and smooth checkout experiences.</p>
+                <ul class="service-features">
+                    <li>Custom Storefronts</li>
+                    <li>Payment Integrations</li>
+                    <li>Inventory Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section class="packages-section" id="packages">
         <div class="packages-grid">
@@ -932,16 +1150,20 @@
     </section>
 
     <!-- Cost Estimator Section -->
-    <section class="estimator-section" id="estimator">
+    <section class="estimator-section" id="estimator" style="display: none;">
         <h2 class="estimator-heading font-display">CUSTOM ESTIMATE.</h2>
         <span class="estimator-sub font-handwriting">Build your perfect package.</span>
         
         <div class="estimator-container">
             <div class="estimator-form">
-                <!-- Pages Slider -->
+                <!-- Extra Pages -->
                 <div class="est-group">
-                    <label class="est-label">Number of Pages: <span id="pages-val">5</span></label>
-                    <input type="range" id="pages-slider" min="1" max="20" value="5" class="est-slider">
+                    <label class="est-label">Extra Pages (LKR 2,000 per extra page)</label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <button type="button" id="btn-decrease-pages" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-primary); cursor: pointer; border-radius: 0.5rem; font-size: 1.2rem; font-weight: bold; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">-</button>
+                        <span id="extra-pages-val" style="font-size: 1.2rem; font-weight: 600; min-width: 2rem; text-align: center;">0</span>
+                        <button type="button" id="btn-increase-pages" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-primary); cursor: pointer; border-radius: 0.5rem; font-size: 1.2rem; font-weight: bold; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">+</button>
+                    </div>
                 </div>
                 
                 <!-- UI/UX Design -->
@@ -953,11 +1175,11 @@
                             <span>Standard (Template)</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="design" value="800">
+                            <input type="radio" name="design" value="10000">
                             <span>Custom Design</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="design" value="1500">
+                            <input type="radio" name="design" value="25000">
                             <span>Premium/Award-winning</span>
                         </label>
                     </div>
@@ -972,11 +1194,11 @@
                             <span>None (Static)</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="cms" value="600">
+                            <input type="radio" name="cms" value="15000">
                             <span>Standard (WordPress)</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="cms" value="1200">
+                            <input type="radio" name="cms" value="35000">
                             <span>Headless/Custom CMS</span>
                         </label>
                     </div>
@@ -991,11 +1213,11 @@
                             <span>No</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="ecommerce" value="1000">
+                            <input type="radio" name="ecommerce" value="25000">
                             <span>Basic (up to 50 products)</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="ecommerce" value="2500">
+                            <input type="radio" name="ecommerce" value="50000">
                             <span>Advanced</span>
                         </label>
                     </div>
@@ -1007,14 +1229,14 @@
                     <div class="est-options">
                         <label class="est-radio">
                             <input type="radio" name="seo" value="0" checked>
-                            <span>None</span>
+                            <span>Standard SEO</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="seo" value="200">
-                            <span>Basic SEO</span>
+                            <input type="radio" name="seo" value="10000">
+                            <span>Enterprise SEO</span>
                         </label>
                         <label class="est-radio">
-                            <input type="radio" name="seo" value="600">
+                            <input type="radio" name="seo" value="20000">
                             <span>Advanced SEO & Analytics</span>
                         </label>
                     </div>
@@ -1024,10 +1246,10 @@
             <div class="estimator-result-card">
                 <h3 class="est-result-title font-display">ESTIMATED TOTAL</h3>
                 <div class="est-price-box">
-                    <span class="est-currency">$</span>
-                    <span id="total-price" class="est-total">1000</span>
+                    <span class="est-currency">LKR&nbsp;</span>
+                    <span id="total-price" class="est-total">15,000</span>
                 </div>
-                <p class="est-note">Base setup fee of $500 included. This is a rough estimate; contact us for a detailed quote.</p>
+                <p class="est-note">Base setup fee of LKR 15,000 included (Covers up to 5 pages). This is a rough estimate; contact us for a detailed quote.</p>
                 <button class="package-btn" onclick="window.location.href='index.html#contact'">Request Quote</button>
             </div>
         </div>
@@ -1154,11 +1376,13 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const basePrice = 500;
-            const pricePerPage = 100;
+            const basePrice = 15000;
+            const pricePerExtraPage = 2000;
+            let extraPagesCount = 0;
 
-            const pagesSlider = document.getElementById('pages-slider');
-            const pagesVal = document.getElementById('pages-val');
+            const extraPagesVal = document.getElementById('extra-pages-val');
+            const btnIncrease = document.getElementById('btn-increase-pages');
+            const btnDecrease = document.getElementById('btn-decrease-pages');
             const totalPriceEl = document.getElementById('total-price');
 
             const radioGroups = ['design', 'cms', 'ecommerce', 'seo'];
@@ -1166,9 +1390,8 @@
             function calculateTotal() {
                 let total = basePrice;
 
-                // Add pages cost
-                const pagesCount = parseInt(pagesSlider.value);
-                total += pagesCount * pricePerPage;
+                // Add extra pages cost
+                total += extraPagesCount * pricePerExtraPage;
 
                 // Add radio options cost
                 radioGroups.forEach(groupName => {
@@ -1182,11 +1405,22 @@
                 totalPriceEl.textContent = total.toLocaleString();
             }
 
-            // Listen for slider change
-            pagesSlider.addEventListener('input', (e) => {
-                pagesVal.textContent = e.target.value;
-                calculateTotal();
-            });
+            // Listen for extra pages buttons
+            if (btnIncrease && btnDecrease && extraPagesVal) {
+                btnIncrease.addEventListener('click', () => {
+                    extraPagesCount++;
+                    extraPagesVal.textContent = extraPagesCount;
+                    calculateTotal();
+                });
+
+                btnDecrease.addEventListener('click', () => {
+                    if (extraPagesCount > 0) {
+                        extraPagesCount--;
+                        extraPagesVal.textContent = extraPagesCount;
+                        calculateTotal();
+                    }
+                });
+            }
 
             // Listen for radio changes
             radioGroups.forEach(groupName => {
