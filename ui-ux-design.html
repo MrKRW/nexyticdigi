@@ -132,9 +132,11 @@
             transition: all 0.3s ease;
         }
 
-        .preorder-btn:hover {
+        @media (hover: hover) {
+                    .preorder-btn:hover {
             background: var(--text-primary);
             color: var(--bg-color);
+        }
         }
 
         
@@ -466,10 +468,12 @@
             transition: all 0.3s ease;
         }
 
-        .package-btn:hover {
+        @media (hover: hover) {
+                    .package-btn:hover {
             background: var(--text-primary);
             color: var(--bg-color);
             border-color: var(--text-primary);
+        }
         }
 
         .package-card.popular .package-btn {
@@ -478,11 +482,13 @@
             border-color: var(--text-primary);
         }
 
-        .package-card.popular .package-btn:hover {
+        .package-card.popular @media (hover: hover) {
+      .package-btn:hover {
             background: transparent;
             color: var(--text-primary);
             border-color: var(--border-color);
         }
+ }
 
         /* FAQ Section */
         .faq-section {
@@ -1021,7 +1027,7 @@
 <h2 class="services-title font-display" style="text-align: center; margin-top: 1.5rem;">UI/UX Design Packages</h2>
 <section class="packages-section" id="packages">
         <div class="packages-grid">
-            <!-- 01 â€” Figma UI/UX Design -->
+            <!-- 01 — Figma UI/UX Design -->
             <div class="package-card popular">
                 <div class="popular-badge font-handwriting">recommended</div>
                 <h3 class="package-title font-display">Figma UI/UX Design</h3>
@@ -1042,7 +1048,7 @@
                 <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
             </div>
 
-            <!-- 02 â€” Video Editing -->
+            <!-- 02 — Video Editing -->
             <div class="package-card">
                 <h3 class="package-title font-display">Video Editing</h3>
                 <p class="package-desc">Transform raw footage into engaging, professional video content.</p>
@@ -1064,7 +1070,7 @@
                 <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
             </div>
 
-            <!-- 03 â€” Photo Editing -->
+            <!-- 03 — Photo Editing -->
             <div class="package-card">
                 <h3 class="package-title font-display">Photo Editing</h3>
                 <p class="package-desc">Professional image editing that makes your visuals sharper, cleaner, and more impactful.</p>
@@ -1086,7 +1092,7 @@
                 <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
             </div>
 
-            <!-- 04 â€” Branding & Visual Identity -->
+            <!-- 04 — Branding & Visual Identity -->
             <div class="package-card">
                 <h3 class="package-title font-display">Branding & Visual Identity</h3>
                 <p class="package-desc">Build a consistent visual identity that makes your brand recognizable.</p>
@@ -1221,7 +1227,7 @@
             </div>
 
             <div class="footer-copyright">
-                Nexytic â”¬âŒ 2026. All rights reserved.
+                Nexytic © 2026. All rights reserved.
             </div>
         </div>
     </footer>

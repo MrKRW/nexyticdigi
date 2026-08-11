@@ -132,9 +132,11 @@
             transition: all 0.3s ease;
         }
 
-        .preorder-btn:hover {
+        @media (hover: hover) {
+                    .preorder-btn:hover {
             background: var(--text-primary);
             color: var(--bg-color);
+        }
         }
 
         
@@ -466,10 +468,12 @@
             transition: all 0.3s ease;
         }
 
-        .package-btn:hover {
+        @media (hover: hover) {
+                    .package-btn:hover {
             background: var(--text-primary);
             color: var(--bg-color);
             border-color: var(--text-primary);
+        }
         }
 
         .package-card.popular .package-btn {
@@ -478,11 +482,13 @@
             border-color: var(--text-primary);
         }
 
-        .package-card.popular .package-btn:hover {
+        .package-card.popular @media (hover: hover) {
+      .package-btn:hover {
             background: transparent;
             color: var(--text-primary);
             border-color: var(--border-color);
         }
+ }
 
         /* FAQ Section */
         .faq-section {
@@ -1199,7 +1205,7 @@
             </div>
 
             <div class="footer-copyright">
-                Nexytic â”¬âŒ 2026. All rights reserved.
+                Nexytic © 2026. All rights reserved.
             </div>
         </div>
     </footer>
