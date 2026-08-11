@@ -17,8 +17,34 @@
             --text-secondary: #444444;
             --text-light: #888888;
             --border-color: rgba(0, 0, 0, 0.12);
-            --bg-card: #fbffeb;
+            --bg-card: #212121;
         }
+
+        /* Dark mode overrides for bg-card sections */
+        .services-overview,
+        .package-card,
+        .process-card,
+        .faq-item,
+        .why-choose-us,
+        .step-card,
+        .contact-info,
+        .values-section {
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+        }
+
+        .service-card,
+        .why-card,
+        .value-card,
+        .featured-hosting-notice {
+            --text-primary: #0a0a0a;
+            --text-secondary: #444444;
+        }
+        
+        .service-icon, .feature-icon, .value-icon {
+            color: #ffffff !important;
+        }
+
 
         html {
             scroll-behavior: smooth;
