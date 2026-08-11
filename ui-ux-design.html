@@ -277,10 +277,10 @@
 
         .packages-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
             width: 100%;
-            max-width: 1400px;
+            max-width: 1600px;
         }
 
         .package-card {
@@ -669,6 +669,14 @@
                 padding: 10rem 2rem 4rem;
             }
 
+        @media (max-width: 1400px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 900px;
+            }
+        }
+
+        @media (max-width: 992px) {
             .hero-title {
                 font-size: 10vw;
             }
@@ -934,129 +942,225 @@
         <h1 class="hero-title font-display">OUR Packages</h1>
         <span class="hero-subtitle font-handwriting">Transparent pricing for all your needs.</span>
     </header>
-
 <div id="ui-ux-design">
 <h2 class="services-title font-display" style="text-align: center; margin-top: 4rem;">UI/UX Design Packages</h2>
 <section class="packages-section" id="packages">
         <div class="packages-grid">
-            <!-- Tier 1: Lite -->
-            <div class="package-card">
-                <div class="package-num font-display">01 ΓÇö Silver</div>
-                <h3 class="package-title font-display">Starter</h3>
-                <p class="package-desc">A professional website design to establish your online presence.</p>
-                <div class="package-price-box">
-                    <span class="package-price">LKR15,000</span>
-                    <span class="package-price-period">/ project</span>
-                </div>
-                <div class="package-divider"></div>
-                <ul class="package-features">
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Custom UI/UX Design
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Responsive Web Development
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        3 free revisions
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        5 Static / Dynamic web pages
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Standard SEO Integration
-                    </li>
-                </ul>
-                <button class="package-btn">Get Started</button>
-            </div>
-
-            <!-- Tier 2: Core (Popular) -->
+            <!-- 01 — Figma UI/UX Design -->
             <div class="package-card popular">
                 <div class="popular-badge font-handwriting">recommended</div>
-                <div class="package-num font-display">02 ΓÇö Gold</div>
-                <h3 class="package-title font-display">Essential</h3>
-                <p class="package-desc">A complete business website built to grow with your brand</p>
-                <div class="package-price-box">
-                    <span class="package-price">LKR25,000</span>
-                    <span class="package-price-period">/ project</span>
-                </div>
+                <div class="package-num font-display">01 — Figma UI/UX Design</div>
+                <h3 class="package-title font-display">Figma UI/UX Design</h3>
+                <p class="package-desc">Design interfaces that are intuitive, modern, and ready for development.</p>
                 <div class="package-divider"></div>
                 <ul class="package-features">
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Custom UI/UX design
+                        UI/UX Design for Websites & Web Apps
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Responsive Web Development
+                        Mobile App UI Design
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Unlimited revisions
+                        Wireframing
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        5 Static / Dynamic web pages
+                        User Flow Design
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Enterprise SEO integration
+                        Interactive Figma Prototypes
                     </li>
-                    <li style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <mark style="background-color: #ffeb3b; color: #000; padding: 0.1em 0.3em; border-radius: 3px; font-weight: 500;">1 year Free Hosting</mark>
-                        </div>
-                        <span style="font-size: 0.75rem; color: var(--text-light); margin-left: calc(16px + 0.75rem); line-height: 1.2; opacity: 0.9;">*Please note that a domain name would be needed to buy separately.</span>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Responsive Design
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Design Systems & Components
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Developer-Ready Design Files
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Basic UX Improvements
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Design Revisions
                     </li>
                 </ul>
-                <button class="package-btn">Choose Growth</button>
+                <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
             </div>
 
-            <!-- Tier 3: Elite / Apex -->
+            <!-- 02 — Video Editing -->
             <div class="package-card">
-                <div class="package-num font-display">03 ΓÇö Platinum</div>
-                <h3 class="package-title font-display">Bespoke</h3>
-                <p class="package-desc">Tailored digital solutions built around your unique needs.</p>
-                <div class="package-price-box">
-                    <span class="package-price">Custom</span>
-                    <span class="package-price-period">starts at LKR30,000</span>
-                </div>
+                <div class="package-num font-display">02 — Video Editing</div>
+                <h3 class="package-title font-display">Video Editing</h3>
+                <p class="package-desc">Transform raw footage into engaging, professional video content.</p>
                 <div class="package-divider"></div>
                 <ul class="package-features">
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                       Fully Custom Website / Application Development
+                        YouTube & Social Media Videos
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Advanced Features & Functionality
+                        Promotional & Marketing Videos
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Third-Party API Integrations
+                        Short-Form Content / Reels
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Custom Admin & Management Systems
+                        Video Cutting & Trimming
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Performance & Security Optimization
+                        Transitions & Effects
                     </li>
                     <li>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Priority Ongoing Support
+                        Color Correction & Grading
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Audio Cleaning & Enhancement
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Subtitles & Captions
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Motion Graphics
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Text & Title Animations
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Background Music & Sound Effects
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Multiple Video Formats & Resolutions
                     </li>
                 </ul>
-                <button class="package-btn">Enquire Now</button>
+                <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
+            </div>
+
+            <!-- 03 — Photo Editing -->
+            <div class="package-card">
+                <div class="package-num font-display">03 — Photo Editing</div>
+                <h3 class="package-title font-display">Photo Editing</h3>
+                <p class="package-desc">Professional image editing that makes your visuals sharper, cleaner, and more impactful.</p>
+                <div class="package-divider"></div>
+                <ul class="package-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Image Retouching
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Background Removal & Replacement
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Object Removal
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Color Correction
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Lighting & Exposure Adjustment
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Skin Retouching
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Product Photo Editing
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Photo Manipulation & Compositing
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Social Media Image Optimization
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Image Resizing & Cropping
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        High-Resolution Export
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Web-Optimized Images
+                    </li>
+                </ul>
+                <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
+            </div>
+
+            <!-- 04 — Branding & Visual Identity -->
+            <div class="package-card">
+                <div class="package-num font-display">04 — Branding & Visual Identity</div>
+                <h3 class="package-title font-display">Branding & Visual Identity</h3>
+                <p class="package-desc">Build a consistent visual identity that makes your brand recognizable.</p>
+                <div class="package-divider"></div>
+                <ul class="package-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Logo Design
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Brand Color Palette
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Typography Selection
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Brand Guidelines
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Social Media Branding
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Business Card & Stationery Design
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Marketing Materials
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Brand Asset Kit
+                    </li>
+                </ul>
+                <button class="package-btn" onclick="window.location.href='index.html#contact'">Get Started</button>
             </div>
         </div>
     </section>
+</div>
 </div>
 
 <section class="faq-section">
