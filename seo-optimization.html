@@ -112,6 +112,48 @@
             color: var(--bg-color);
         }
 
+        
+        /* Back Navigation */
+        .back-nav-container {
+            padding: 9rem 4rem 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.65rem 1.4rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-color);
+            transform: translateX(-4px);
+        }
+
+        .back-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover svg {
+            transform: translateX(-4px);
+        }
+
         /* Hero Header Section */
         .hero-header {
             min-height: 50vh;
@@ -657,6 +699,10 @@
         }
 
         @media (max-width: 992px) {
+            .back-nav-container {
+                padding: 7rem 2rem 1rem;
+            }
+
             nav {
                 padding: 2rem;
             }
@@ -929,14 +975,16 @@
         </ul>
         <button class="preorder-btn" onclick="window.location.href='index.html#contact'">Contact Us</button>
     </nav>
+    <div class="back-nav-container">
+        <a href="services.html" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to All Services
+        </a>
+    </div>
 
-    <header class="hero-header">
-        <h1 class="hero-title font-display">OUR Packages</h1>
-        <span class="hero-subtitle font-handwriting">Transparent pricing for all your needs.</span>
-    </header>
 
 <div id="seo-optimization">
-<h2 class="services-title font-display" style="text-align: center; margin-top: 4rem;">SEO Optimization Packages</h2>
+<h2 class="services-title font-display" style="text-align: center; margin-top: 1.5rem;">SEO Optimization Packages</h2>
 <section class="packages-section" id="packages">
         <div class="packages-grid">
             <!-- Tier 1: Lite -->
