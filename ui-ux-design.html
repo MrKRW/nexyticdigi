@@ -1233,6 +1233,40 @@
     </footer>
 
     
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const enquireButtons = document.querySelectorAll('.package-btn');
+            enquireButtons.forEach(btn => {
+                // If it already goes to contact, modify it
+                if (btn.tagName.toLowerCase() === 'a' && btn.getAttribute('href') === 'index.html#contact') {
+                    btn.setAttribute('href', 'contact.html');
+                }
+
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    let packageCard = this.closest('.package-card');
+                    let pkgName = packageCard ? packageCard.querySelector('.package-title').innerText : '';
+                    let serviceTitleEl = document.querySelector('.services-title');
+                    let serviceName = serviceTitleEl ? serviceTitleEl.innerText.replace(' Packages', '').replace(' Packages.', '') : '';
+                    
+                    if (!pkgName && !serviceName) {
+                        let h1 = document.querySelector('h1.hero-heading');
+                        serviceName = h1 ? h1.innerText : document.title.split('|')[1]?.trim() || document.title;
+                    }
+                    
+                    let fullPackageName = pkgName ? `${serviceName} - ${pkgName}` : serviceName;
+                    window.location.href = `contact.html?package=${encodeURIComponent(fullPackageName.trim())}`;
+                });
+                
+                // Remove inline onclick if it exists so our event listener takes over
+                if (btn.hasAttribute('onclick')) {
+                    btn.removeAttribute('onclick');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

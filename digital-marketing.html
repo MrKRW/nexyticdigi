@@ -1135,11 +1135,11 @@
         <div class="faq-grid">
             <div class="faq-item">
                 <h4 class="faq-question">Can I customize my project package?</h4>
-                <p class="faq-answer">Absolutely. While our Lite and Core packages fit most standards, the Apex tier is explicitly designed for unique business configurations. We also customize aspects of Lite/Core to align with specific design goals.</p>
+                <p class="faq-answer">Absolutely. Bsed on your requirements we can customize your packages suiting to your budget./p>
             </div>
             <div class="faq-item">
                 <h4 class="faq-question">What are the typical project timelines?</h4>
-                <p class="faq-answer">Startup/Lite pages usually deploy within 2-3 weeks. Growth/Core projects average 4-6 weeks depending on CMS integration and complexity. Apex systems have custom schedules based on project specs.</p>
+                <p class="faq-answer">Startup/Lite pages usually deploy within 2-3 weeks. Custom/complex projects average 4-6 weeks depending on CMS integration and complexity. Apex systems have custom schedules based on project specs.</p>
             </div>
             <div class="faq-item">
                 <h4 class="faq-question">Do you assist with hosting setup and configuration?</h4>
@@ -1247,6 +1247,40 @@
     </footer>
 
     
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const enquireButtons = document.querySelectorAll('.package-btn');
+            enquireButtons.forEach(btn => {
+                // If it already goes to contact, modify it
+                if (btn.tagName.toLowerCase() === 'a' && btn.getAttribute('href') === 'index.html#contact') {
+                    btn.setAttribute('href', 'contact.html');
+                }
+
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    let packageCard = this.closest('.package-card');
+                    let pkgName = packageCard ? packageCard.querySelector('.package-title').innerText : '';
+                    let serviceTitleEl = document.querySelector('.services-title');
+                    let serviceName = serviceTitleEl ? serviceTitleEl.innerText.replace(' Packages', '').replace(' Packages.', '') : '';
+                    
+                    if (!pkgName && !serviceName) {
+                        let h1 = document.querySelector('h1.hero-heading');
+                        serviceName = h1 ? h1.innerText : document.title.split('|')[1]?.trim() || document.title;
+                    }
+                    
+                    let fullPackageName = pkgName ? `${serviceName} - ${pkgName}` : serviceName;
+                    window.location.href = `contact.html?package=${encodeURIComponent(fullPackageName.trim())}`;
+                });
+                
+                // Remove inline onclick if it exists so our event listener takes over
+                if (btn.hasAttribute('onclick')) {
+                    btn.removeAttribute('onclick');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
