@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexytic | Contact Us</title>
+    <title>Nexytic | Privacy Policy</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1021,96 +1021,29 @@
     </nav>
 
     <section class="contact-hero">
-        <h1 class="contact-heading font-display">Get In Touch</h1>
-        <span class="contact-sub font-handwriting">We'd love to hear from you.</span>
+        <h1 class="contact-heading font-display">Privacy Policy</h1>
+        <span class="contact-sub font-handwriting">How we handle your data.</span>
     </section>
 
     <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-info-panel">
-                <h3 class="font-display">Contact Information</h3>
-                <p>Ready to start your next project? Reach out to our team and we'll get back to you as soon as possible.</p>
-                
-                <div class="info-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <span>nexyticdigital@gmail.com</span>
-                </div>
-                <div class="info-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <span>+94 703232462</span>
-                </div>
-                <div class="info-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <span>Nexytic Digital, Sri Lanka.</span>
-                </div>
+        <div class="contact-container" style="display: block;">
+            <div class="contact-info-panel" style="max-width: 100%;">
+                <h3 class="font-display">Privacy Policy</h3>
+                <p>At Nexytic, accessible from our website, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Nexytic and how we use it.</p>
+        <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+        <br>
+        <h4 style="color: #ffffff; margin-bottom: 1rem; font-size: 1.5rem;">Information we collect</h4>
+        <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+        <br>
+        <h4 style="color: #ffffff; margin-bottom: 1rem; font-size: 1.5rem;">How we use your information</h4>
+        <p>We use the information we collect in various ways, including to:</p>
+        <ul style="color: #e0e0e0; margin-left: 2rem; margin-bottom: 2rem; line-height: 1.6;">
+            <li>Provide, operate, and maintain our website</li>
+            <li>Improve, personalize, and expand our website</li>
+            <li>Understand and analyze how you use our website</li>
+        </ul>
+        
             </div>
-            
-            <form class="contact-form" id="whatsapp-form">
-                <div class="form-group">
-                    <label for="package">Selected Package / Service</label>
-                    <input type="text" id="package" class="form-control" placeholder="General Inquiry" readonly style="background-color: #f5f5f5; color: #555; pointer-events: none;">
-                </div>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" class="form-control" placeholder="How can we help?" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" class="form-control" placeholder="Tell us about your project..." required></textarea>
-                </div>
-                <div class="submit-btn-container">
-                    <button type="submit" class="whatsapp-btn">SEND VIA WHATSAPP</button>
-                </div>
-            </form>
-
-            <script>
-                // Auto-fill package from URL
-                document.addEventListener('DOMContentLoaded', function() {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const packageParam = urlParams.get('package');
-                    if (packageParam) {
-                        document.getElementById('package').value = packageParam;
-                        document.getElementById('subject').value = "Inquiry about " + packageParam;
-                    }
-
-                    // Handle WhatsApp Submission
-                    document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        const pkg = document.getElementById('package').value;
-                        const name = document.getElementById('name').value;
-                        const email = document.getElementById('email').value;
-                        const subject = document.getElementById('subject').value;
-                        const message = document.getElementById('message').value;
-
-                        let waText = `*New Inquiry*
-
-`;
-                        if (pkg && pkg !== "General Inquiry") {
-                            waText += `*Package:* ${pkg}
-`;
-                        }
-                        waText += `*Name:* ${name}
-`;
-                        waText += `*Email:* ${email}
-`;
-                        waText += `*Subject:* ${subject}
-`;
-                        waText += `*Message:* ${message}`;
-
-                        const encodedText = encodeURIComponent(waText);
-                        const whatsappUrl = `https://wa.me/94703232462?text=${encodedText}`;
-                        window.open(whatsappUrl, '_blank');
-                    });
-                });
-            </script>
         </div>
     </section>
 
