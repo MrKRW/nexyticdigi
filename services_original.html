@@ -8,7 +8,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Caveat:wght@700&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -39,8 +41,10 @@
             --text-primary: #0a0a0a;
             --text-secondary: #444444;
         }
-        
-        .service-icon, .feature-icon, .value-icon {
+
+        .service-icon,
+        .feature-icon,
+        .value-icon {
             color: #ffffff !important;
         }
 
@@ -133,10 +137,10 @@
         }
 
         @media (hover: hover) {
-                    .preorder-btn:hover {
-            background: var(--text-primary);
-            color: var(--bg-color);
-        }
+            .preorder-btn:hover {
+                background: var(--text-primary);
+                color: var(--bg-color);
+            }
         }
 
         /* Hero Header Section */
@@ -270,7 +274,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .service-features li::before {
             content: 'Î“Ã¥Ã†';
             color: var(--text-primary);
@@ -282,13 +286,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
             }
+
             .services-title {
                 font-size: 4rem;
             }
+
             .services-overview {
                 padding: 6rem 2rem;
             }
@@ -427,11 +434,11 @@
         }
 
         @media (hover: hover) {
-                    .package-btn:hover {
-            background: #000000;
-            color: #ffffff;
-            border-color: #000000;
-        }
+            .package-btn:hover {
+                background: #000000;
+                color: #ffffff;
+                border-color: #000000;
+            }
         }
 
         .package-card.popular .package-btn {
@@ -441,12 +448,12 @@
         }
 
         @media (hover: hover) {
-        .package-card.popular .package-btn:hover {
-            background: #000000;
-            color: #ffffff;
-            border-color: #000000;
+            .package-card.popular .package-btn:hover {
+                background: #000000;
+                color: #ffffff;
+                border-color: #000000;
+            }
         }
-    }
 
         /* FAQ Section */
         .faq-section {
@@ -782,6 +789,7 @@
                 gap: 1rem;
             }
         }
+
         /* Estimator Section */
         .estimator-section {
             padding: 8rem 4rem;
@@ -882,7 +890,7 @@
             justify-content: center;
         }
 
-        .est-radio input:checked + span {
+        .est-radio input:checked+span {
             border-color: var(--text-primary);
             background: var(--text-primary);
             color: var(--bg-color);
@@ -897,7 +905,7 @@
             position: sticky;
             top: 8rem;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
         }
 
         .est-result-title {
@@ -935,11 +943,13 @@
             .estimator-container {
                 flex-direction: column;
             }
+
             .estimator-result-card {
                 width: 100%;
                 position: relative;
                 top: 0;
             }
+
             .estimator-heading {
                 font-size: 4rem;
             }
@@ -952,7 +962,8 @@
 
     <nav>
         <a href="index.html" class="logo font-display">
-            <img src="logonew_clean.png" alt="Nexytic Logo" style="height: 45px; width: auto; border-radius: 4px; mix-blend-mode: multiply;">
+            <img src="logonew_clean.png" alt="Nexytic Logo"
+                style="height: 45px; width: auto; border-radius: 4px; mix-blend-mode: multiply;">
         </a>
         <ul class="nav-links">
             <li><a href="index.html#features">Home</a></li>
@@ -960,7 +971,8 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="#">Our work</a></li>
         </ul>
-        <a href="contact.html" class="preorder-btn" style="text-decoration: none; display: inline-block; text-align: center;">Contact Us</a>
+        <a href="contact.html" class="preorder-btn"
+            style="text-decoration: none; display: inline-block; text-align: center;">Contact Us</a>
     </nav>
 
     <header class="hero-header">
@@ -973,15 +985,20 @@
             <h2 class="services-title font-display">What We Do.</h2>
             <span class="services-subtitle font-handwriting">Everything you need to succeed online.</span>
         </div>
-        
+
         <div class="services-grid">
             <!-- Service 1 -->
             <div class="service-card">
                 <div class="service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
                 </div>
                 <h3 class="service-name font-display">Web Development</h3>
-                <p class="service-desc">We build fast, secure, and scalable websites tailored to your specific business needs. From stunning landing pages to complex corporate platforms.</p>
+                <p class="service-desc">We build fast, secure, and scalable websites tailored to your specific business
+                    needs. From stunning landing pages to complex corporate platforms.</p>
                 <ul class="service-features">
                     <li>Custom Coding (HTML, CSS, JS)</li>
                     <li>Responsive & Mobile-First</li>
@@ -992,10 +1009,16 @@
             <!-- Service 2 -->
             <div class="service-card">
                 <div class="service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
                 </div>
                 <h3 class="service-name font-display">Software Solutions</h3>
-                <p class="service-desc">Custom web applications and enterprise software built to streamline your operations and deliver exceptional functionality.</p>
+                <p class="service-desc">Custom web applications and enterprise software built to streamline your
+                    operations and deliver exceptional functionality.</p>
                 <ul class="service-features">
                     <li>Custom Web Applications</li>
                     <li>Admin Dashboards</li>
@@ -1006,10 +1029,16 @@
             <!-- Service 3 -->
             <div class="service-card">
                 <div class="service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
                 </div>
                 <h3 class="service-name font-display">UI/UX Design</h3>
-                <p class="service-desc">Intuitive, aesthetic, and user-centric design that captivates your audience and ensures a seamless digital experience across all devices.</p>
+                <p class="service-desc">Intuitive, aesthetic, and user-centric design that captivates your audience and
+                    ensures a seamless digital experience across all devices.</p>
                 <ul class="service-features">
                     <li>Wireframing & Prototyping</li>
                     <li>User Interface Design</li>
@@ -1020,10 +1049,18 @@
             <!-- Service 4 -->
             <div class="service-card">
                 <div class="service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
                 </div>
                 <h3 class="service-name font-display">Hosting & Security</h3>
-                <p class="service-desc">Reliable hosting solutions paired with top-tier security protocols to keep your data safe and your website running smoothly 24/7.</p>
+                <p class="service-desc">Reliable hosting solutions paired with top-tier security protocols to keep your
+                    data safe and your website running smoothly 24/7.</p>
                 <ul class="service-features">
                     <li>Cloud Infrastructure</li>
                     <li>SSL Certificates</li>
@@ -1034,10 +1071,14 @@
             <!-- Service 5 -->
             <div class="service-card">
                 <div class="service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
                 </div>
                 <h3 class="service-name font-display">SEO Optimization</h3>
-                <p class="service-desc">Enhance your visibility on search engines. We use proven strategies to rank your website higher and attract organic, high-quality traffic.</p>
+                <p class="service-desc">Enhance your visibility on search engines. We use proven strategies to rank your
+                    website higher and attract organic, high-quality traffic.</p>
                 <ul class="service-features">
                     <li>On-Page & Off-Page SEO</li>
                     <li>Keyword Research</li>
@@ -1048,10 +1089,16 @@
             <!-- Service 6 -->
             <div class="service-card">
                 <div class="service-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
                 </div>
                 <h3 class="service-name font-display">E-Commerce</h3>
-                <p class="service-desc">Robust online stores built for conversions. We deliver secure payment gateways, inventory management, and smooth checkout experiences.</p>
+                <p class="service-desc">Robust online stores built for conversions. We deliver secure payment gateways,
+                    inventory management, and smooth checkout experiences.</p>
                 <ul class="service-features">
                     <li>Custom Storefronts</li>
                     <li>Payment Integrations</li>
@@ -1073,11 +1120,26 @@
                 </div>
                 <div class="package-divider"></div>
                 <ul class="package-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom UI/UX Design</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Responsive Web Development</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>3 free revisions</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>5 Static / Dynamic web pages</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Standard SEO Integration</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Custom UI/UX Design</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Responsive Web Development</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>3 free revisions</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>5 Static / Dynamic web pages</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Standard SEO Integration</span></li>
                 </ul>
                 <button class="package-btn">ENQUIRE NOW</button>
             </div>
@@ -1093,17 +1155,39 @@
                 </div>
                 <div class="package-divider"></div>
                 <ul class="package-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom UI/UX design</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Responsive Web Development</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Unlimited revisions</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>5 Static / Dynamic web pages</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Enterprise SEO integration</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Custom UI/UX design</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Responsive Web Development</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Unlimited revisions</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>5 Static / Dynamic web pages</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Enterprise SEO integration</span></li>
                     <li style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <mark style="background-color: #ffeb3b; color: #000; padding: 0.1em 0.3em; border-radius: 3px; font-weight: 500;">1 year Free Hosting</mark>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <mark
+                                style="background-color: #ffeb3b; color: #000; padding: 0.1em 0.3em; border-radius: 3px; font-weight: 500;">1
+                                year Free Hosting</mark>
                         </div>
-                        <span style="font-size: 0.75rem; color: var(--text-light); margin-left: calc(16px + 0.75rem); line-height: 1.2; opacity: 0.9;">*Please note that a domain name would be needed to buy separately.</span>
+                        <span
+                            style="font-size: 0.75rem; color: var(--text-light); margin-left: calc(16px + 0.75rem); line-height: 1.2; opacity: 0.9;">*Please
+                            note that a domain name would be needed to buy separately.</span>
                     </li>
                 </ul>
                 <button class="package-btn">ENQUIRE NOW</button>
@@ -1119,12 +1203,30 @@
                 </div>
                 <div class="package-divider"></div>
                 <ul class="package-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fully Custom Website / Application Development</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Advanced Features & Functionality</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Third-Party API Integrations</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom Admin & Management Systems</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Performance & Security Optimization</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Priority Ongoing Support</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Fully Custom Website / Application Development</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Advanced Features & Functionality</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Third-Party API Integrations</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Custom Admin & Management Systems</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Performance & Security Optimization</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg><span>Priority Ongoing Support</span></li>
                 </ul>
                 <button class="package-btn">ENQUIRE NOW</button>
             </div>
@@ -1135,19 +1237,22 @@
     <section class="estimator-section" id="estimator" style="display: none;">
         <h2 class="estimator-heading font-display">CUSTOM ESTIMATE.</h2>
         <span class="estimator-sub font-handwriting">Build your perfect package.</span>
-        
+
         <div class="estimator-container">
             <div class="estimator-form">
                 <!-- Extra Pages -->
                 <div class="est-group">
                     <label class="est-label">Extra Pages (LKR 2,000 per extra page)</label>
                     <div style="display: flex; align-items: center; gap: 1rem;">
-                        <button type="button" id="btn-decrease-pages" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-primary); cursor: pointer; border-radius: 0.5rem; font-size: 1.2rem; font-weight: bold; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">-</button>
-                        <span id="extra-pages-val" style="font-size: 1.2rem; font-weight: 600; min-width: 2rem; text-align: center;">0</span>
-                        <button type="button" id="btn-increase-pages" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-primary); cursor: pointer; border-radius: 0.5rem; font-size: 1.2rem; font-weight: bold; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">+</button>
+                        <button type="button" id="btn-decrease-pages"
+                            style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-primary); cursor: pointer; border-radius: 0.5rem; font-size: 1.2rem; font-weight: bold; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">-</button>
+                        <span id="extra-pages-val"
+                            style="font-size: 1.2rem; font-weight: 600; min-width: 2rem; text-align: center;">0</span>
+                        <button type="button" id="btn-increase-pages"
+                            style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-primary); cursor: pointer; border-radius: 0.5rem; font-size: 1.2rem; font-weight: bold; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">+</button>
                     </div>
                 </div>
-                
+
                 <!-- UI/UX Design -->
                 <div class="est-group">
                     <label class="est-label">UI/UX Design Complexity</label>
@@ -1224,14 +1329,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="estimator-result-card">
                 <h3 class="est-result-title font-display">ESTIMATED TOTAL</h3>
                 <div class="est-price-box">
                     <span class="est-currency">LKR&nbsp;</span>
                     <span id="total-price" class="est-total">15,000</span>
                 </div>
-                <p class="est-note">Base setup fee of LKR 15,000 included (Covers up to 5 pages). This is a rough estimate; contact us for a detailed quote.</p>
+                <p class="est-note">Base setup fee of LKR 15,000 included (Covers up to 5 pages). This is a rough
+                    estimate; contact us for a detailed quote.</p>
                 <button class="package-btn" onclick="window.location.href='index.html#contact'">ENQUIRE NOW</button>
             </div>
         </div>
@@ -1245,19 +1351,27 @@
         <div class="faq-grid">
             <div class="faq-item">
                 <h4 class="faq-question">Can I customize my project package?</h4>
-                <p class="faq-answer">Absolutely. While our Lite and Core packages fit most standards, the Apex tier is explicitly designed for unique business configurations. We also customize aspects of Lite/Core to align with specific design goals.</p>
+                <p class="faq-answer">Absolutely. While our Lite and Core packages fit most standards, the Apex tier is
+                    explicitly designed for unique business configurations. We also customize aspects of Lite/Core to
+                    align with specific design goals.</p>
             </div>
             <div class="faq-item">
                 <h4 class="faq-question">What are the typical project timelines?</h4>
-                <p class="faq-answer">Startup/Lite pages usually deploy within 2-3 weeks. Growth/Core projects average 4-6 weeks depending on CMS integration and complexity. Apex systems have custom schedules based on project specs.</p>
+                <p class="faq-answer">Startup/Lite pages usually deploy within 2-3 weeks. Growth/Core projects average
+                    4-6 weeks depending on CMS integration and complexity. Apex systems have custom schedules based on
+                    project specs.</p>
             </div>
             <div class="faq-item">
                 <h4 class="faq-question">Do you assist with hosting setup and configuration?</h4>
-                <p class="faq-answer">Yes, we provide full support setting up domains, configuring DNS rules, installing SSL certificates, and provisioning server environments as standard service options on all service setups.</p>
+                <p class="faq-answer">Yes, we provide full support setting up domains, configuring DNS rules, installing
+                    SSL certificates, and provisioning server environments as standard service options on all service
+                    setups.</p>
             </div>
             <div class="faq-item">
                 <h4 class="faq-question">Is ongoing support included post-launch?</h4>
-                <p class="faq-answer">Every setup package includes a support period (1 month for Lite, 3 months for Core, lifetime critical for Apex). Additional retainer options are also available for continuous upgrades.</p>
+                <p class="faq-answer">Every setup package includes a support period (1 month for Lite, 3 months for
+                    Core, lifetime critical for Apex). Additional retainer options are also available for continuous
+                    upgrades.</p>
             </div>
         </div>
     </section>
@@ -1272,38 +1386,39 @@
             <div class="footer-middle">
                 <div class="footer-main-info">
                     <div class="footer-info">
-                        <p>Elevate your digital presence with bespoke web development,<br>innovative software solutions, and<br>seamless user experiences.</p>
-                        <button class="footer-btn">Book a meeting with us <svg width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                        <p>Elevate your digital presence with bespoke web development,<br>innovative software solutions,
+                            and<br>seamless user experiences.</p>
+                        <button class="footer-btn" onclick="window.location.href='contact.html'">Book a meeting with us
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17l9.2-9.2M17 17V7H7" />
                             </svg></button>
                     </div>
 
                     <div class="footer-nav">
                         <ul class="nav-horizontal">
-                            <li><a href="#">Web Development <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            <li><a href="web-development.html">Web Development <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                                     </svg></a></li>
-                            <li><a href="#">Software Solutions <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
-                                    </svg></a></li>
-                            <li><a href="#">Hosting & Security <svg width="12" height="12" viewBox="0 0 24 24"
+                            <li><a href="software-solutions.html">Software Solutions <svg width="12" height="12" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                                     </svg></a></li>
-                            <li><a href="#">UI/UX Design <svg width="12" height="12" viewBox="0 0 24 24"
+                            <li><a href="hosting-security.html">Hosting & Security <svg width="12" height="12" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                                     </svg></a></li>
-                            <li><a href="#">Digital Marketing <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            <li><a href="ui-ux-design.html">UI/UX Design <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                                    </svg></a></li>
+                            <li><a href="digital-marketing.html">Digital Marketing <svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                                     </svg></a></li>
@@ -1341,11 +1456,12 @@
                         </svg></a>
                     <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+                            <path
+                                d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
                         </svg></a>
                 </div>
                 <div class="contact-info">
-                    <span>Support@nexytic.com</span>
+                    <span>Mail : nexyticdigital@gmail.com</span>
                     <span>Contact : +94 703232462</span>
                 </div>
             </div>
@@ -1418,7 +1534,7 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const enquireButtons = document.querySelectorAll('.package-btn');
             enquireButtons.forEach(btn => {
                 // If it already goes to contact, modify it
@@ -1426,23 +1542,23 @@
                     btn.setAttribute('href', 'contact.html');
                 }
 
-                btn.addEventListener('click', function(e) {
+                btn.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     let packageCard = this.closest('.package-card');
                     let pkgName = packageCard ? packageCard.querySelector('.package-title').innerText : '';
                     let serviceTitleEl = document.querySelector('.services-title');
                     let serviceName = serviceTitleEl ? serviceTitleEl.innerText.replace(' Packages', '').replace(' Packages.', '') : '';
-                    
+
                     if (!pkgName && !serviceName) {
                         let h1 = document.querySelector('h1.hero-heading');
                         serviceName = h1 ? h1.innerText : document.title.split('|')[1]?.trim() || document.title;
                     }
-                    
+
                     let fullPackageName = pkgName ? `${serviceName} - ${pkgName}` : serviceName;
                     window.location.href = `contact.html?package=${encodeURIComponent(fullPackageName.trim())}`;
                 });
-                
+
                 // Remove inline onclick if it exists so our event listener takes over
                 if (btn.hasAttribute('onclick')) {
                     btn.removeAttribute('onclick');
