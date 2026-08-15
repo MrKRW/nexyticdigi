@@ -314,7 +314,7 @@
         }
         
         .service-features li::before {
-            content: 'Î“Ã¥Ã†';
+            content: '\2713'; /* Unicode checkmark */
             color: var(--text-primary);
             font-weight: bold;
         }
@@ -1016,75 +1016,170 @@
     </div>
 
 
-<div id="e-commerce">
-<h2 class="services-title font-display" style="text-align: center; margin-top: 1.5rem;">E Commerce Packages</h2>
-<p style="text-align: center; color: var(--text-secondary); font-size: 1.2rem; margin-top: 0.5rem; margin-bottom: -4rem; position: relative; z-index: 10;">We are working with these packages.</p>
-<section class="packages-section" id="packages">
-        <div class="packages-grid">
-            <!-- Tier 1: Lite -->
-            <div class="package-card">
-                <h3 class="package-title font-display">Starter</h3>
-                <p class="package-desc">A professional website design to establish your online presence.</p>
-                <div class="package-price-box">
-                    <span class="package-price">LKR15,000</span>
-                    <span class="package-price-period">/ project</span>
-                </div>
-                <div class="package-divider"></div>
-                <ul class="package-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom UI/UX Design</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Responsive Web Development</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>3 free revisions</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>5 Static / Dynamic web pages</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Standard SEO Integration</span></li>
+<div id="e-commerce" style="padding-top: 2rem;">
+    <div style="text-align: center; max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem;">
+        <h2 class="services-title font-display" style="margin-bottom: 1.5rem;">E-Commerce Development</h2>
+        <h3 class="font-handwriting" style="font-size: 2.5rem; color: var(--text-secondary); margin-bottom: 2rem; transform: rotate(-1deg);">Turn Your Products Into a Powerful Online Store</h3>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 3rem;">
+            We create modern, secure, and scalable e-commerce websites that make it easy for businesses to showcase products, manage orders, accept payments, and grow their online sales.
+        </p>
+
+        <div style="display: inline-block; padding: 1.5rem 3rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1.5rem; box-shadow: 0 15px 35px rgba(0,0,0,0.05);">
+            <span style="font-size: 1.2rem; font-weight: 600; color: #ffffff; font-family: 'Inter', sans-serif; display: block; line-height: 1.4;">Pricing is customized based on your software requirements.</span>
+        </div>
+    </div>
+
+    <section style="padding: 4rem 2rem; max-width: 1400px; margin: 0 auto;">
+        <h3 class="font-display" style="font-size: 4rem; text-align: center; margin-bottom: 4rem; color: var(--text-primary);">What's Included</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+            <!-- Store Design -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Store Design</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Custom e-commerce UI design</li>
+                    <li>Mobile-friendly and responsive layout</li>
+                    <li>Product-focused storefront</li>
+                    <li>Easy navigation and search</li>
+                    <li>Custom product and category pages</li>
+                    <li>Shopping cart and checkout experience</li>
                 </ul>
-                <button class="package-btn">ENQUIRE NOW</button>
+            </div>
+            
+            <!-- Product Management -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Product Management</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Product and category management</li>
+                    <li>Product variations and attributes</li>
+                    <li>Inventory management</li>
+                    <li>Stock availability tracking</li>
+                    <li>Product images and media</li>
+                    <li>Pricing and discount management</li>
+                </ul>
             </div>
 
-            <!-- Tier 2: Core (Popular) -->
-            <div class="package-card popular">
-                <div class="popular-badge font-handwriting">recommended</div>
-                <h3 class="package-title font-display">Essential</h3>
-                <p class="package-desc">A complete business website built to grow with your brand</p>
-                <div class="package-price-box">
-                    <span class="package-price">LKR25,000</span>
-                    <span class="package-price-period">/ project</span>
-                </div>
-                <div class="package-divider"></div>
-                <ul class="package-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom UI/UX design</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Responsive Web Development</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Unlimited revisions</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>5 Static / Dynamic web pages</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Enterprise SEO integration</span></li>
-                    <li style="flex-direction: column; align-items: flex-start; gap: 0.25rem;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <mark style="background-color: #ffeb3b; color: #000; padding: 0.1em 0.3em; border-radius: 3px; font-weight: 500;">1 year Free Hosting</mark>
-                        </div>
-                        <span style="font-size: 0.75rem; color: var(--text-light); margin-left: calc(16px + 0.75rem); line-height: 1.2; opacity: 0.9;">*Please note that a domain name would be needed to buy separately.</span>
-                    </li>
+            <!-- Customer Features -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Customer Features</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Customer registration and login</li>
+                    <li>User profiles</li>
+                    <li>Wishlist functionality</li>
+                    <li>Shopping cart</li>
+                    <li>Order history</li>
+                    <li>Product search and filtering</li>
+                    <li>Reviews and ratings</li>
                 </ul>
-                <button class="package-btn">ENQUIRE NOW</button>
             </div>
 
-            <!-- Tier 3: Elite / Apex -->
-            <div class="package-card">
-                <h3 class="package-title font-display">Bespoke</h3>
-                <p class="package-desc">Tailored digital solutions built around your unique needs.</p>
-                <div class="package-price-box">
-                    <span class="package-price">Custom</span>
-                    <span class="package-price-period">starts at LKR30,000</span>
-                </div>
-                <div class="package-divider"></div>
-                <ul class="package-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fully Custom Website / Application Development</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Advanced Features & Functionality</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Third-Party API Integrations</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Custom Admin & Management Systems</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Performance & Security Optimization</span></li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Priority Ongoing Support</span></li>
+            <!-- Checkout & Payments -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Checkout & Payments</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Secure checkout system</li>
+                    <li>Multiple payment options</li>
+                    <li>Payment gateway integration</li>
+                    <li>Cash-on-delivery support where applicable</li>
+                    <li>Order confirmation and notifications</li>
+                    <li>Automated invoice generation</li>
                 </ul>
-                <button class="package-btn">ENQUIRE NOW</button>
+            </div>
+
+            <!-- Order Management -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Order Management</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Admin order dashboard</li>
+                    <li>Order status management</li>
+                    <li>Order tracking</li>
+                    <li>Customer order notifications</li>
+                    <li>Returns and cancellation management</li>
+                    <li>Sales and order records</li>
+                </ul>
+            </div>
+
+            <!-- Admin Panel -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Admin Panel</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Product management</li>
+                    <li>Customer management</li>
+                    <li>Order management</li>
+                    <li>Inventory controls</li>
+                    <li>Discount and coupon management</li>
+                    <li>Sales overview and reports</li>
+                    <li>Website content management</li>
+                </ul>
+            </div>
+
+            <!-- Marketing Features -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Marketing Features</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Discount and coupon codes</li>
+                    <li>Promotional banners</li>
+                    <li>Featured products</li>
+                    <li>Related product recommendations</li>
+                    <li>Promotional campaigns</li>
+                    <li>Social media integration</li>
+                    <li>SEO-friendly product pages</li>
+                </ul>
+            </div>
+
+            <!-- Security & Performance -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Security & Performance</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>SSL and secure connections</li>
+                    <li>Secure authentication</li>
+                    <li>Input and data validation</li>
+                    <li>Performance optimization</li>
+                    <li>Responsive across devices</li>
+                    <li>Basic security hardening</li>
+                </ul>
+            </div>
+
+            <!-- Deployment & Support -->
+            <div class="service-card" style="padding: 2.5rem 2rem;">
+                <h4 class="service-name" style="font-size: 1.6rem; margin-bottom: 1.5rem;">Deployment & Support</h4>
+                <ul class="service-features" style="border-top: none; padding-top: 0;">
+                    <li>Domain and hosting configuration</li>
+                    <li>Production deployment</li>
+                    <li>Database setup</li>
+                    <li>Payment gateway configuration</li>
+                    <li>Initial store setup</li>
+                    <li>Post-launch technical support</li>
+                    <li>Bug fixes and maintenance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-card); padding: 8rem 2rem; margin-top: 4rem; border-top: 1px solid var(--border-color); text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h3 class="font-display" style="font-size: 4rem; color: #ffffff; margin-bottom: 1.5rem;">Built For Your Business</h3>
+            <p style="font-size: 1.15rem; color: #e0e0e0; line-height: 1.6; margin-bottom: 4rem;">
+                Whether you're launching your first online store or moving an existing business online, we build e-commerce solutions around your products, customers, and business processes.
+            </p>
+
+            <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.15em; color: #aaaaaa; margin-bottom: 2rem; font-weight: 600;">Suitable For</h4>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 5rem;">
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Retailers</span>
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Fashion Brands</span>
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Electronics Stores</span>
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Restaurants</span>
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Beauty & Lifestyle Brands</span>
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Product Businesses</span>
+                <span style="padding: 0.75rem 1.5rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 2rem; font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Online Startups</span>
+            </div>
+
+            <div style="padding: 4rem 2rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 1.5rem;">
+                <h3 class="font-display" style="font-size: 3rem; color: var(--text-primary); margin-bottom: 1.5rem;">More Than Just an Online Store</h3>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    We build e-commerce platforms that combine a smooth shopping experience with powerful management tools, giving you everything you need to operate and grow your online business.
+                </p>
+                <button class="package-btn" style="max-width: 250px; padding: 1.25rem;" onclick="window.location.href='contact.html?package=E-Commerce%20Development'">START YOUR PROJECT</button>
             </div>
         </div>
     </section>
