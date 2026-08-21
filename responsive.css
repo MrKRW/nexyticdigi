@@ -1,0 +1,126 @@
+/* responsive.css - Mobile overrides */
+
+/* Hamburger Icon */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-primary, #0a0a0a);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media (max-width: 992px) {
+    .mobile-menu-toggle {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 1.5rem !important;
+    }
+    
+    .nav-right-items {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Override inline display: none */
+    .nav-links {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed !important;
+        top: 0;
+        right: -100%; /* hide off screen */
+        height: 100vh;
+        width: 250px;
+        background-color: var(--bg-color, #ffffff);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: 5rem;
+        transition: right 0.3s ease-in-out;
+        transform: none !important; /* unset transform: translateX(-50%) */
+        left: auto !important;
+        align-items: flex-start;
+        padding-left: 2rem;
+        gap: 2rem !important;
+        z-index: 999;
+    }
+
+    /* Active class for mobile menu */
+    .nav-links.mobile-active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem !important;
+        color: var(--text-primary, #0a0a0a) !important;
+    }
+    
+    /* Hide Contact Us button in navbar on mobile */
+    .preorder-btn {
+        display: none !important;
+    }
+    
+    /* General section padding adjustments for mobile */
+    .hero, .why-choose-us, .services-overview, section, footer {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    /* Ensure content images and videos do not overflow */
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further tweak headings for small screens to prevent overflow */
+    h1, h2, .why-heading, .features-heading {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+    }
+    
+    .hero-bg-text {
+        font-size: 18vw !important; /* prevent overflow */
+    }
+    
+    .main-handwriting {
+        font-size: 12vw !important;
+    }
+    
+    .handwritten-overlay {
+        width: 100% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .sub-handwriting {
+        font-size: clamp(1.5rem, 7vw, 2.5rem) !important;
+        text-align: left !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        white-space: normal !important;
+    }
+    
+    .product-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+    }
+    
+    .product-image {
+        width: 100% !important;
+        max-width: 700px !important;
+        padding: 0 1rem !important;
+    }
+}
