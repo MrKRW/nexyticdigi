@@ -124,3 +124,24 @@
         padding: 0 1rem !important;
     }
 }
+
+/* Mobile Menu specific styles */
+.mobile-only-nav {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .mobile-only-nav {
+        display: block;
+    }
+    .desktop-only-nav {
+        display: none;
+    }
+    .nav-links a.highlight-nav {
+        background: var(--text-primary, #0a0a0a) !important;
+        color: var(--bg-color, #ffffff) !important;
+        padding: 0.85rem 2rem !important;
+        border-radius: 2rem;
+        display: inline-block;
+    }
+}
